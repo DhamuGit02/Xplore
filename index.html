@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xplore</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&family=Space+Mono:wght@700&family=Trispace:wght@100&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.11.0/firebase-auth-compat.js"></script>
+    <script src="loginReg.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <h1>hey</h1> -->
+    <video src="images-videos/Solar System_Trim.mp4" autoplay muted id="bgvid" preload="metadata"></video>
+    <div id="blackfilter"></div>
+    <header>
+        <img src="imgs and vids/xplore logo 1.png" alt="" id="logo">
+        <nav id="navbar">
+            <ul>
+                <li><a href="#" id="home" onclick="welcome1()">Home</a></li>
+                <li><a href="#" id="home" onclick="login()" id="login">Login</a></li>
+                <li><a href="#" id="reg" onclick="register()">Register</a></li>
+                <li><a href="http://127.0.0.1:5500/profile_page.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <section>
+        <h1 id="welcome">Welcome to Xplore</h1>
+        <p id="typeeffect">
+        </p>
+    </section>
+    <section id="secloginform">
+        <div class="centre">
+            <form action="" id="loginform">
+                <div>
+                    <span>Email:</span><br> <input type="text" class="loginbox" id="logname"
+                        placeholder="Enter Your Email">
+                </div>
+                <div>
+                    <span>Password:</span><br> <input type="password" class="loginbox" id="logpass"
+                        placeholder="Enter Password">
+                </div>
+                <br>
+                <div>
+                    <span><button type="button" class="loginbt" onclick="logIn()" id="login-btn">Login</button></span>
+                    <span><input type="reset" class="loginbt"></span>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section id="secregform">
+        <form action="" id="regform">
+            <div>
+                <span>Email:</span> <input type="text" class="regbox" id="regname" placeholder="Enter Your Email">
+            </div>
+            <div>
+                <span>Password:</span> <input type="password" class="regbox" id="regpass" placeholder="Enter Password">
+            </div>
+            <br>
+            <!-- <div>
+                <span>Confirm password:</span> <input type="password" class="login" id="confirm-pass" placeholder="confirm your Password">
+            </div> -->
+            <div>
+                <button type="button" class="loginbt" onclick="signUp()">Register</button>
+                <input type="reset" class="loginbt">
+            </div>
+        </form>
+    </section>
+    <script>
+        var i = 0;
+        var txt = 'Explore 8 planets of our Milky Way Galaxy and read brief description of each.';
+        var speed = 40;
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("typeeffect").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+                // document.getElementById('log').onclick = 'break';
+
+            }
+        }
+        window.onload = typeWriter()
+    </script>
+</body>
+
+</html>

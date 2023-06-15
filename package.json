@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "firebase": "^9.11.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "@types/animejs": "^3.1.5"
+  }
+}

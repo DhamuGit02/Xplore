@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xplore</title>
+    <link rel="stylesheet" href="./profile_page.css">
+    <script src="./node_modules/animejs/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
+<body>
+    <h1 id="title">Project Team Members</h1>
+    <section id="profile-container">
+        <div class="container" id="D">
+            <div class="profile-photo" style="z-index: 1; background-image: url('./images-videos/dharmesh.jpg');"></div>
+            <h4 class="name" style="z-index: 1;">Dharmesh Marathe</h4>
+            <h5 class="desc" style="z-index: 1;">Frontend & Backend Developer</h5>
+            <div class="contact-details" style="z-index: 1;">
+                <span>
+                    <a href="https://instagram.com/quasars29?igshid=YmMyMTA2M2Y=">
+                        <ion-icon class="logo" name="logo-instagram"></ion-icon>
+                    </a>
+                </span>
+                <span>
+                    <a href="mailto:dharmesh.201413101@vcet.edu.in?subject=">
+                        <ion-icon class="logo" name="mail"></ion-icon>
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="container" id="S">
+            <div class="profile-photo" style="z-index: 1; background-image: url('./images-videos/shubham.jpg');"></div>
+            <h4 class="name" style="z-index: 1;">Shubham Nakashe</h4>
+            <h5 class="desc" style="z-index: 1;">Frontend & Backend Developer</h5>
+            <div class="contact-details" style="z-index: 1;">
+                <span>
+                    <a href="https://instagram.com/shubh.s28?igshid=YmMyMTA2M2Y=">
+                        <ion-icon class="logo" name="logo-instagram"></ion-icon>
+                    </a>
+                </span>
+                <span>
+                    <a href="mailto:shubham.201443101@vcet.edu.in">
+                        <ion-icon class="logo" name="mail"></ion-icon>
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="container" id="SA">
+            <div class="profile-photo" style="z-index: 1; background-image: url('./images-videos/sakshi.jpg');"></div>
+            <h4 class="name" style="z-index: 1;">Sakshi Ghonge</h4>
+            <h5 class="desc" style="z-index: 1;">Frontend, HTML, CSS Developer</h5>
+            <div class="contact-details" style="z-index: 1;">
+                <span>
+                    <a href="https://instagram.com/dimplegirl.10?igshid=YmMyMTA2M2Y=">
+                        <ion-icon class="logo" name="logo-instagram"></ion-icon>
+                    </a>
+                </span>
+                <span>
+                    <a href="mailto:sakshi.201313207@vcet.edu.in">
+                        <ion-icon class="logo" name="mail"></ion-icon>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </section>
+    <script>
+        const titleAnime = anime({
+            targets: '#title',
+            opacity: 1,
+            translateY: 50,
+            delay: 1300,
+            easings: 'easeInQuad'
+        })
+        const containerAnime = anime({
+            targets: '.container',
+            opacity: 1,
+            translateY: 60,
+            delay: anime.stagger(490, {start: 1300, easing: 'linear', from: 'first'})
+        })
+        const bodyAnime = anime({
+            targets: 'body',
+            backgroundPositionY: -200,
+            delay: 1320,
+            duration: 1800,
+            easings: 'easeInSine'
+        })
+        const logoAnime = anime({
+            targets: '.logo',
+            opacity: 1,
+            translateY: 30,
+            delay: anime.stagger(220, {start: 1320, easings: 'linear', from: 'first'})
+        })
+        function invokeAllAnimes() {
+            titleAnime.play()
+            containerAnime.play()
+            bodyAnime.play()
+            logoAnime.play()
+        }
+        window.onload = invokeAllAnimes
+    </script>
+</body>
+</html>

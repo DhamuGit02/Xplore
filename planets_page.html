@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xplore</title>
+    <link rel="stylesheet" href="planets_page_style.css">
+    <script src="/node_modules/animejs/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+    </style>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> -->
+</head>
+<body>
+    <!-- <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Share+Tech+Mono&family=Sofia&display=swap');
+    </style> -->
+    <div id="planets-container">
+        <ul id="planets-list">
+            <li class="list">
+                <a class="planet-name" href="#">Earth</a>
+                <div class="underline"></div>
+            </li>
+            <li class="list">
+                <a class="planet-name" href="#">Mars</a>
+                <div class="underline"></div>
+            </li>
+            <li class="list">
+                <a class="planet-name" href="#">Mercury</a>
+                <div class="underline"></div>
+            </li>
+            <li class="list">
+                <a class="planet-name" href="#">Venus</a>
+                <div class="underline"></div>
+            </li>
+            <li class="list">
+                <a class="planet-name" href="#">Jupiter</a>
+                <div class="underline"></div>
+            </li>
+            <li class="list">
+                <a class="planet-name" href="#">Saturn</a>
+                <div class="underline"></div>
+            </li>
+            <li class="list">
+                <a class="planet-name" href="#">Uranus</a>
+                <div class="underline"></div>
+            </li>
+            <li class="list">
+                <a class="planet-name" href="#">Neptune</a>
+                <div class="underline"></div>
+            </li>
+        </ul>
+    </div>
+    <div id="main-panel">
+        <a href="http://127.0.0.1:5500/index.html" id="logout">
+            <ion-icon name="log-out"></ion-icon><span id="log-out-text">Log out</span>
+        </a>
+        <h2 id="planet">Earth</h2>
+        <div id="planet-image"></div>
+        <section id="planet-overview">
+            <h1 id="overview">OVERVIEW</h1>
+            <p id="planet-desc">
+                Earth is only the fifth largest planet in the solar system,
+                it is the only world in our solar system with liquid water on the surface.
+                Just slightly larger than nearby Venus, Earth is the biggest of the four planets closest to the Sun,
+                all of which are made of rock and metal.
+                The name Earth is at least 1,000 years old.
+                All of the planets, except for Earth, were named after Greek and Roman gods and goddesses.
+                However, the name Earth is a Germanic word, which simply means "the ground."
+            </p>
+            <div id="planet-info">
+                <div id="day-panel">
+                    <h3 id="hours">Days (Hours)</h3>
+                    <p id="day-value">24</p>
+                </div>
+                <div id="radius-panel">
+                    <h3 id="hours">Radius (KMs)</h3>
+                    <p id="radius-value">6371</p>
+                </div>
+                <div id="moons-panel">
+                    <h3 id="hours">Moons</h3>
+                    <p id="moons-value">1</p>
+                </div>
+                <div id="distance-from-earth-panel">
+                    <h3 id="distance">Distance From Earth</h3>
+                    <p id="distance-value">0 KM</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="/planets_page_script.js"></script>
+</body>
+</html>
